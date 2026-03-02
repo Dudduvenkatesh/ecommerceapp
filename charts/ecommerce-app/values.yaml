@@ -1,0 +1,20 @@
+namespace: ecommerce-ns 
+
+replicas: 3
+
+appDeployment:
+ labels:
+  app: ecommerce
+ name: ecommerce-conatiner
+
+image:
+ repository: dudduvenkatesh/ecommerce
+ tag: v1.0.1
+port: 80
+
+appService:
+ app: ecommerce
+ port: 80
+ type: LoadBalancer
+
+
